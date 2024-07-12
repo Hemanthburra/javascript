@@ -1,0 +1,330 @@
+// var
+		// let
+		// const
+		// if
+		// switch
+		// for
+		// function
+		// return
+		// try
+
+		javascript variables are declared in 4 ways:
+		using var
+		using let
+		using const
+
+		after declaration of a variable its default value in undefined
+
+		we want to assign the value to the variable by using assignment operator
+
+		by using one statement we can declare multiple variables with same datatype
+		ex:
+		let person = "John Doe", carName = "Volvo", price = 200;
+
+		let     --> redeclaration=false
+				    Reassign = true
+		var     --> redeclaration = true
+				    Reassign = true
+		const   --> redeclaration = false
+				    Reassign = false
+
+		A variable defined with the const keyword cannot be reassigned:
+		const PI = 3.141592653589793;
+		PI = 3.14;      // This will give an error
+		PI = PI + 10;   // This will also give an error
+
+		const arrays:
+		--------------
+			// You can create a constant array:
+			const cars = ["Saab", "Volvo", "BMW"];
+
+			// You can change an element:
+			cars[0] = "Toyota";
+
+			// You can add an element:
+			cars.push("Audi");
+		const objects:
+			// You can create a const object:
+			const car = {type:"Fiat", model:"500", color:"white"};
+
+			// You can change a property:
+			car.color = "red";
+
+			// You can add a property:
+			car.owner = "Johnson";
+
+		operators in JS:
+		----------------
+			arithematic operators = + , - , * , / , ** , % , ++ , --;
+			comparison operators =  == , ===, != ,!==,> , < , >= , <= , ?;
+			logical operators = &&,|| , !;
+			bitwise operators = & , | , ~ , ^ , << leftshift, >>  right shift, >>> unsigned rightshift
+
+
+		typeof() => tells type of the variables
+		instanceof() => return true if an object is an instance of an object type
+
+			string comparison:
+				let text1 = "A";
+				let text2 = "B";
+				let result = text1 < text2; // returns true
+
+
+		JavaScript has 8 Datatypes
+			1. String
+			2. Number
+			3. Bigint
+			4. Boolean
+			5. Undefined
+			6. Null
+			7. Symbol
+			8. Object
+
+		The Object Datatype
+		The object data type can contain:
+
+			1. An object
+			2. An array
+			3. A date
+
+
+		strings:
+		---------
+			// Using double quotes:
+			let carName1 = "Volvo XC60";
+
+			// Using single quotes:
+			let carName2 = 'Volvo XC60';
+
+			// Single quote inside double quotes:
+			let answer1 = "It's alright";
+
+			// Single quotes inside double quotes:
+			let answer2 = "He is called 'Johnny'";
+
+			// Double quotes inside single quotes:
+			let answer3 = 'He is called "Johnny"';
+		numbers:
+		---------
+			let y = 123e5;    // 12300000
+			let z = 123e-5;   // 0.00123
+
+		let x = BigInt("123456789012345678901234567890");
+
+		boolean:
+		---------
+			let x = 5;
+			let y = 5;
+			let z = 6;
+			(x == y)       // Returns true
+			(x == z)       // Returns false
+
+		const objects:
+		-------------
+			const person = {
+			  firstName: "John",
+			  lastName: "Doe",
+			  age: 50,
+			  eyeColor: "blue"
+			};
+		Accessing Object Properties
+			You can access object properties in two ways:
+
+			objectName.propertyName 
+
+			(or)
+
+			objectName["propertyName"]
+
+			const person = {
+			  firstName: "John",
+			  lastName : "Doe",
+			  id       : 5566,
+			  fullName : function() {
+			    return this.firstName + " " + this.lastName;
+			  }
+			};
+
+
+		events
+		---------
+			onchange	 = An HTML element has been changed
+			onclick	     = The user clicks an HTML element
+			onmouseover	 = The user moves the mouse over an HTML element
+			onmouseout	 = The user moves the mouse away from an HTML element
+			onkeydown	 = The user pushes a keyboard key
+			onload	     = The browser has finished loading the page
+
+		Template Strings
+		----------------
+			Templates were introduced with ES6 (JavaScript 2016).
+
+			Templates are strings enclosed in backticks (`This is a template string`).
+
+			Templates allow single and double quotes inside a string:
+
+			Example
+			let text = `He's often called "Johnny"`;
+			let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+			let length = text.length;
+
+
+			\b	Backspace
+			\f	Form Feed
+			\n	New Line
+			\r	Carriage Return
+			\t	Horizontal Tabulator
+			\v	Vertical Tabulator
+
+		Basic String Methods
+		--------------------
+			Javascript strings are primitive and immutable: All string methods produces a 
+			new string without altering the original string.
+
+			String length
+				let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+				let length = text.length;
+			String charAt() => returns index char
+				let text = "HELLO WORLD";
+				let char = text.charAt(0);
+			String charCodeAt() => retuns code of that char
+				let text = "HELLO WORLD";
+				let char = text.charCodeAt(0);
+			String at() => same operation as charAt
+			String [ ] => access elements as array format
+			String slice() => slice(start, end)
+							substring(start, end)
+							substr(start, length)
+
+			String substring()
+			String substr()	
+			String toUpperCase() => toUpperCase all characters in the string
+			String toLowerCase() => toLowerCase all characters in the strings
+			String concat() => text1.concat(" ",text2)
+			String trim() => trims the white spaces in the string from start and end of the string
+			String trimStart() => trim white spaces from the start
+			String trimEnd() =>  trims the white spaces from the end
+			String padStart(length,element which is tobe pad) => pads the element in the start of the string text.padStart(4,0);
+			String padEnd() => pads the element in the end of the string text.padEnd(4,0);
+			String repeat(count) => repeats the string upto count.
+			String replace(element in the string,desired element) => replace the first match in the string.
+				let text = "Please visit Microsoft!";
+				let newText = text.replace(/MICROSOFT/i, "W3Schools"); // single element
+				let newText = text.replace(/Microsoft/g, "W3Schools"); // all elements
+			String replaceAll() => replace all the elements eith desired elements
+			String split("char") => splits the string into array from the desired character
+
+		String Search Methods
+		----------------------
+			String indexOf("word") => returns the index of the word
+			String indexOf("word",index) =>starts from the given index
+			String lastIndexOf("word") => returns of the last occurence in the String
+			String lastIndexOf("word",index)
+			String search() => returns the position of the match
+			String match() => retuns the array of count and searched elements
+				/word/i => insensitive 
+				/word/g => sensitive and search in entire strings
+				/word/gi => insensitive and search in entire string
+			String matchAll() => returns a iterator which matches the string
+			String includes() => returns true if the word exist in the string
+			String startsWith() => returns true if the string starts with the given word
+			String endsWith("",upto string of given index) => returns true if the string ends with the given word
+
+		Number Methods
+		-----------------
+			These number methods can be used on all JavaScript numbers:
+
+			Method	Description
+			toString()	 =>Returns a number as a string
+			toExponential()	=>Returns a number written in exponential notation
+			toFixed()	=>Returns a number written with a number of decimals
+			toPrecision()	=>Returns a number written with a specified length
+			valueOf()	=>Returns a number as a number
+
+			Property	Description
+			EPSILON	    =>The difference between 1 and the smallest number > 1.
+			MAX_VALUE	=>The largest number possible in JavaScript
+			MIN_VALUE	=>The smallest number possible in JavaScript
+			MAX_SAFE_INTEGER	=>The maximum safe integer (253 - 1)
+			MIN_SAFE_INTEGER	=>The minimum safe integer -(253 - 1)
+			POSITIVE_INFINITY	=>Infinity (returned on overflow)
+			NEGATIVE_INFINITY	=>Negative infinity (returned on overflow)
+			NaN	                =>A "Not-a-Number" value
+
+
+		Basic Array Methods
+		-------------------
+			Array length => returns the length
+			Array toString() =>converts Array into string
+			Array at() => gives index value
+			Array join("word/char") => joins the array into one string with given join word
+			Array pop() => removes the last element
+			Array push() => pushes the new element at the back
+			Array shift() => removes the first element and shifts the elements in the Array to the left
+			Array unshift() => adds the new element at the begin and shifts the elements in the Array to the right
+			Array delete() => delete the index given like {delete arr[2]}; deletes the 2 index element and put undefined in that place
+			Array concat() => merge the 2 arrays { arr.concat(arr2)} returns the new Array
+			Array copyWithin() => 
+			Array flat() => returns a new Array with concat subarrays into one Array (note:used for 2d arrays)
+			Array splice(indexOf element starts,how many element are removed from that index,elements which are to be added)
+				 (note: works on the original array)
+			Array splice(indexOf element starts,how many elements are removed from that index) => removing the elements using splice
+			Array toSpliced() => returns the new Array after splice is done
+			Array slice() => returns the new Array from the startindex to end index;by default start should be given and default the end is the end of the Array
+		
+		Array Find and Search Methods
+		-------------------------------
+			Array indexOf("word",startindex its optional) => returns the index of the word in the Array
+			Array lastIndexOf("word",startindex is optional) => returns the last occurance of the word in the Array
+			Array includes() => returns boolean true->present false->absent
+			Array find() => returns the value of the first Array element which passes the function
+				ex:
+					const numbers = [4, 9, 16, 25, 29];
+					let first = numbers.find(myFunction);
+
+					function myFunction(value, index, array) {
+					  return value > 18;
+					}
+			Array findIndex() => returns the index of the first Array element which passes the myFunction
+			ex:
+					const numbers = [4, 9, 16, 25, 29];
+					let first = numbers.findIndex(myFunction);
+
+					function myFunction(value, index, array) { // value,index, and array is automatically passes by using findIndex
+					  return value > 18;
+					}
+			Array findLast() => it will start from the end and returns the value of the first element that satisifies the condition
+				ex:
+					const temp = [27, 28, 30, 40, 42, 35, 30];
+					let high = temp.findLast(x => x > 40);
+			Array findLastIndex() => same as findLast() but returns the index instead of the element
+
+		Alpabetic Sort
+		---------------
+			Array sort() => sorts the elements
+			Array reverse() => reverse the elements
+			Array toSorted() => returns the new sorted Array and doesnt alter the original Array
+			Array toReversed() => returns the new reverse array and doesnt alter the original Array
+			Sorting Objects	 =>
+
+
+
+
+		Numeric Sort
+		-------------
+			Numeric Sort() => sorts the elements by there numerical values
+				const points = [40, 100, 1, 5, 25, 10];
+				points.sort(function(a, b){return a - b}); // ascending sort
+
+				const points = [40, 100, 1, 5, 25, 10];
+				points.sort(function(a, b){return b - a}); // reverse sorting
+
+			Random Sort() => sorts the array in random order
+				const points = [40, 100, 1, 5, 25, 10];
+				points.sort(function(){return 0.5 - Math.random()});
+			Math.min()
+				Math.min.apply(null,arr)
+			Math.max()
+				Math.min.apply(null,arr)
+            Home made Min()
+			Home made Max()

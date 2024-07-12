@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="exaple">Hello</p>
+    <p class="ex">namesthe</p>
+    <p class="ex">revathu</p>
+    <p class="ex">hemanth</p>
+    <p class="ex">vicky</p>
+    <script>
+        let x = document.getElementsByClassName("ex");
+        for (let i = 0 ; i < x.length ; i++){
+            x[i].innerHTML = "potti";
+        }
+
+        let d = document.getElementsByTagName("p");
+        d[1].innerHTML = "extraluu";
+
+        document.getElementById("exaple").innerHTML = "giraffie";
+
+        document.querySelector("p").innerHTML = "fifa";
+
+        document.querySelectorAll("p")[2].style.backgroundColor = "pink";
+    </script>
+</body>
+</html>
