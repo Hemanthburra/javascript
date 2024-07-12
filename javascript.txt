@@ -86,7 +86,7 @@
 			1. An object
 			2. An array
 			3. A date
-
+			maps, sets, intarrays, floatarrays, promises, and more.
 
 		strings:
 		---------
