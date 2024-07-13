@@ -12,19 +12,44 @@
     <p class="ex">hemanth</p>
     <p class="ex">vicky</p>
     <script>
-        let x = document.getElementsByClassName("ex");
-        for (let i = 0 ; i < x.length ; i++){
-            x[i].innerHTML = "potti";
-        }
+        let s = 123e5;
+        let x1 = BigInt("123456789012345678901234567890");
+        const w = {
+            "name" : "hemanth",
+            "age" : 32
+        };
+        console.log(s,x1);
+        console.log(typeof(x1));
+        let x = 0;
+        let y = "0";
+        console.log(x===y);
 
-        let d = document.getElementsByTagName("p");
-        d[1].innerHTML = "extraluu";
+        const person = {
+            firstname : "burra",
+            lastname : "hemanth",
+            age : 20,
+            fullname : function(){
+                return this.firstname + " " + this.lastname;
+            }
+        };
+        console.log(person.fullname());
+        let k = "         hello      ";
+        console.log(k.toUpperCase());
+        console.log(k);
+        
+        // let x = document.getElementsByClassName("ex");
+        // for (let i = 0 ; i < x.length ; i++){
+        //     x[i].innerHTML = "potti";
+        // }
 
-        document.getElementById("exaple").innerHTML = "giraffie";
+        // let d = document.getElementsByTagName("p");
+        // d[0].innerHTML = "extraluu";
 
-        document.querySelector("p").innerHTML = "fifa";
+        // document.getElementById("exaple").innerHTML = "giraffie";
 
-        document.querySelectorAll("p")[2].style.backgroundColor = "pink";
+        // document.querySelector("p").innerHTML = "fifa";
+
+        // document.querySelectorAll("p")[2].style.backgroundColor = "pink";
     </script>
 </body>
 </html>
