@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //callbacks  = a function is passed as a argument to another function
+        // used to handle async operations:
+        // 1. reading a File
+        // 2. Network requests
+        // 3. Interacting with database
+        // ---------------------CODE--------------------------
+        /*
+         hello(function(){wait(bye);});
+        function hello(callback){
+            console.log("hello!")
+            callback(bye);
+        }
+        function wait(callback){
+            console.log("wait");
+            callback();
+        }
+        function bye(){
+            console.log("bye");
+        }*/
+        //---------------------TOPIC  END---------------------
+
+        // for eack() => method used to iterate over the elements of an array and apply a specific function(callback)
+        // to each element
+        // array.foreach(callback);
+        //element, index, arr is provided
+        // ---------------------CODE----------------------
+        /*let arr = [1,2,3,4,5,6];
+        let fruits = ["apple","bannana","orange"];
+
+        arr.forEach(square);
+        arr.forEach(display);
+
+        fruits.forEach(uppercase);
+        fruits.forEach(display);
+
+        function square(element,index,array){
+            array[index] = element*element;
+        }
+        function uppercase(element,index,array){
+            array[index] = element.toUpperCase();
+        }
+        function display(element,index){
+            console.log(element,index);
+        }*/
+        //---------------------TOPIC  END---------------------
+
+        //.map() => accepts a callback and applies that function to each element of an array,
+        // then returns the new array
+        // ---------------------CODE----------------------
+        /*const arr = [1,2,3,4,5,6];
+        const fruits = ["apple","bannana","orange"];
+
+        const square = arr.map(double);
+        console.log(square);
+        const fruitsupper = fruits.map(uppercase);
+        console.log(fruitsupper);
+
+        function uppercase(element){ return element.toUpperCase();}
+        function double(element){
+            return Math.pow(element,2);
+
+        const myArr = [1, 2, 3, 4, 5, 6];
+        const newArr = myArr.flatMap((x) => x * 2);
+
+        }*/
+        //---------------------TOPIC  END---------------------
+
+        //.filter() => creates a new array by filtering out elements
+        // ----------------------CODE-------------------------
+        /*const numbers = [45, 4, 9, 16, 25];
+        const over18 = numbers.filter(myFunction);
+
+        function myFunction(value, index, array) {
+            return value > 18;
+        }*/
+        //---------------------TOPIC  END---------------------
+
+        //.reduce() method runs a function on each array element to produce (reduce it to) a single value.
+         // ----------------------CODE-------------------------
+        /*const numbers = [45, 4, 9, 16, 25];
+        let sum = numbers.reduce(myFunction);
+
+        function myFunction(total, value, index, array) {
+            return total + value;
+        }*/
+        //---------------------TOPIC  END---------------------
+
+        //The reduceRight() works from right-to-left in the array.
+         // ----------------------CODE-------------------------
+        /*const numbers = [45, 4, 9, 16, 25];
+        let sum = numbers.reduceRight(myFunction);
+
+        function myFunction(total, value, index, array) {
+            return total + value;
+        }*/
+        //---------------------TOPIC  END---------------------
+
+        //.every() method checks if all array values pass a test.
+         // ----------------------CODE-------------------------
+        /*const numbers = [45, 4, 9, 16, 25];
+        let sum = numbers.every(myFunction);
+
+        function myFunction(value, index, array) {
+            return value > 18;
+        }
+        console.log(sum); // o/p : false;*/
+        // returns true or false if all 
+        //the elements in the array passed the condition then it provides true
+        //---------------------TOPIC  END---------------------
+        
+        //.some method is same as the .every but if some passes the condition it gives true 
+        //.from method is used to returns an array from any object with a length property by giving the string or array
+        // arr.from([1,2,3,4]) o/p : 1,2,3,4
+        // arr.from("ABCD") o/p : A,B,C,D
+
+        //.keys give the iterative indexs of the array object
+        const arr = [1,2,3,4];
+        const x = arr.keys();
+        //if we want to print the iteratives then we want to use the for loop
+        for (let num of x){
+            console.log(num);
+        }
+
+    </script>
+</body>
+</html>
