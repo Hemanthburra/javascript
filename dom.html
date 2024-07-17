@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            
+        }
+        .main-div{
+            height: 1000px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+        }
+        .container{
+            height: auto;
+            width: 75%;
+            border: 2px solid #000000;
+            background-color:darksalmon;
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+            padding: 30px;
+            border-radius: 30px;
+        }
+        ul{
+            list-style-type: none;
+        }
+        .list-items{
+            background-color: white;
+            color: black;
+            text-align: center;
+            border: 2px solid black;
+            padding: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            margin: 2px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <div class="container">
+            <h1 id="main-heading">Favourite Movie franchese</h1>
+            <!-- <div class="list-decor"> -->
+                <ul>
+                    <li class="list-items">
+                        <span>Neo</span> 
+                        The Matrix</li>
+                    <li class="list-items">Star Wars</li>
+                    <li class="list-items">Harry Potter</li>
+                    <li class="list-items">Lord ofRings</li>
+                    <li class="list-items">Marvel</li>
+                </ul>
+            <!-- </div> -->
+        </div>
+    </div>
+    <script>    
+    
+    // ---------------------DOM Methods:------------------------------------
+    /*
+    //Id Name
+    const title = document.getElementById("main-heading");
+    console.log(title);
+    //Class Name
+    const listItems = document.getElementsByClassName("list-items");
+    console.log(listItems);
+    //Tag Name
+    const tag_Name = document.getElementsByTagName("li");
+    console.log(tag_Name);
+    //query Selector => selects the First Element in the document
+    const x = document.querySelector("div");
+    console.log(x);
+    //query Selector all => selects all the elements in the document
+    const x1 = document.querySelectorAll("div");
+    console.log(x1);
+    */
+    //------------Styling the elements by using DOM:------------------------
+    /*
+    const title = document.querySelector("#main-heading");
+    title.style.color = "red";
+    console.log(title);
+
+    const listItems = document.querySelectorAll(".list-items");
+    
+    for (let i = 0 ; i < listItems.length ; i++){
+        listItems[i].style.fontSize = '30px';
+        listItems[i].style.color = 'blue';
+    }
+    console.log(listItems);*/
+
+    //----------------------Creating/Adding elements------------------------------
+    /*
+    //----------- creating
+    const ul = document.querySelector("ul");
+    const li = document.createElement("li");
+
+    //-------------Adding
+    ul.append(li);
+    li.innerText = 'X-Men';
+    //-------------modifying
+    const firstListName = document.querySelector("li");
+    console.log(firstListName.innerText);
+    //o/p: Neo The Matrix
+    console.log(firstListName.innerHTML);
+     //o/p:
+    //  <span>Neo</span> 
+    //  The Matrix
+    console.log(firstListName.textContent);
+     //o/p:Neo 
+    //     The Matrix
+    
+    //------------------Modifying Attributes & Classes----------------------
+    //------------Attibutes
+
+    li.setAttribute('id','main-heading');// adds the attribute
+    // li.removeAttribute('id');
+
+    const x = document.querySelector('#main-heading');
+    console.log(x.getAttribute('id'));
+
+    //------------classes
+    li.classList.add('list-items'); // adds class to the element
+    // li.classList.add('list-decor');
+    li.classList.remove('list-items'); // removes the class from the element
+    
+    console.log(li.classList.contains('list-items')); // returns true or false
+    // if the class is present in the element then it returns true or false
+
+    //---------------remove
+    li.remove(); // removes the element from the document
+
+    */
+    
+    // -------------------------traversing the DOM:-----------------------
+    
+
+    //------------------parent node traversal
+
+    let ul = document.querySelector('ul');
+    /*
+    console.log(ul.parentElement); // prints the parent of the present element
+    console.log(ul.parentNode);//same as the parent element
+    console.log(ul.parentElement.parentElement);//prints the grand parent
+    console.log(ul.parentNode.parentNode);//prints the grand parent
+
+    const html = document.documentElement;
+    console.log(html);
+    console.log(html.parentElement);// prints null
+    console.log(html.parentNode);// prints #document
+    */
+
+    //-----------------child node traversal
+    /*
+    console.log(ul.childNodes); // returns the all the child nodes present in the ul
+    console.log(ul.firstChild);// returns the first child 
+    console.log(ul.lastChild); // returns the last child
+
+    ul.childNodes[1].style.backgroundColor = 'blue';
+    
+    console.log(ul.children); // prints only the elements present in the ul
+    // 
+    HTMLCollection(5) [li.list-items, li.list-items, li.list-items, li.list-items, li.list-items]
+    0: li.list-items
+    1: li.list-items
+    2: li.list-items
+    3: li.list-items
+    4: li.list-items
+    length:5
+    //
+    console.log(ul.firstElementChild); // prints the first element o/p : li.list-items
+    console.log(ul.lastElementChild); // prints the last element o/p : li.list-items
+    */
+    //------------sibling node traversal
+    /*
+    const div = document.querySelector('div');
+
+    console.log(div.childNodes);
+    console.log(ul.previousSibling);
+    console.log(ul.previousElementSibling);
+    console.log(ul.nextSibling);
+    console.log(ul.nextElementSibling);
+    */
+
+    // -------------------------EVENT LISTENERS------------------------------
+    
+    </script>
+</body>
+</html>

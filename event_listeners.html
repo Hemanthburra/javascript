@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            
+        }
+        .container{
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color:lightblue;
+        }
+        .boxes{
+            border: 2px solid black;
+            border-radius: 30px;
+            background-color:transparent;
+            height: auto;
+            width: 20%;
+            text-align: center;
+            padding: 20px;
+            margin: auto;
+        }
+        button{
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .hidden-content{
+            display: none;
+        }
+        .hidden-content.reaveal-btn{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id = 'main-heading'>Event Listerners</h1>
+    <div class="container">
+        <button class="reaveal-btn boxes">RevealMore</button>
+        <div class="hidden-content boxes">
+            Lorem ipsum dolor sit amet coānsectetur 
+            adipisicing elit. Non minus dicta omnis.
+             Quasi asperiores, impedit animi consectetur 
+             voluptate assumenda minima blanditiis 
+             voluptatibus quisquam ipsa velit fugit, 
+             saepe fuga inventore cum.
+
+        </div>
+        <div class="boxes box-2">
+            <h1 id="heading">Example 1</h1>
+            <button class="btn-2">Enter</button>
+        </div>
+        <div class="boxes box-3">
+            <h1 id="heading">Example 1</h1>
+            <button class="btn-3">Enter</button>
+        </div>
+
+    </div>
+
+    <script>    
+    // -------------------------EVENT LISTENERS------------------------------
+
+    // // click function
+    const x = document.querySelector('.btn-2');
+
+    function alertbtn(){
+        alert("I love js");
+    }
+    x.addEventListener("click",alertbtn);
+
+    //mouseover function
+
+    const y = document.querySelector('.box-3');
+    function changeBack(){
+        y.style.backgroundColor = 'blue';
+    }
+    y.addEventListener("mouseover",changeBack);
+
+    console.log(y);
+
+    // hidden content displaying by using the button reaveal more
+    const x1 = document.querySelector('.reaveal-btn');
+    const hiddenContent = document.querySelector('.hidden-content');
+
+    function revealContent(){
+        if (hiddenContent.classList.contains('reaveal-btn')){
+            hiddenContent.classList.remove('reaveal-btn');
+        }
+        else{
+            hiddenContent.classList.add('reaveal-btn');
+        }
+    }
+    // we are checking wheater that class is there are not 
+    //if it is there we are removing 
+    //else we are adding
+    // by this operation we can show or hide the content by clicking the button
+    x1.addEventListener("click",revealContent);
+    console.log(x,hiddenContent);
+
+
+
+    </script>
+</body>
+</html>
