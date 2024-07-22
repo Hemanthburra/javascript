@@ -1,0 +1,126 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.model{
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    height: 300px;
+    width: 40%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px;
+    display: none;
+    /* transition: .5s; */
+}
+
+.model .close-btn{
+    /* float: right; */
+    display: block;
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+}
+.faq{
+    height: 400px;
+    width: 100%;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.questions{
+    height: 300px;
+    width: 40%;
+    /* background-color: aqua; */
+    padding: 30px;
+}
+
+.questions-menu{
+    height: auto;
+    width: 100%;
+    margin-bottom: 20px;
+    /* background-color: white; */
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    /* position: fixed; */
+    
+}
+.question-title{
+    height: 30px;
+    /* background-color: brown; */
+    padding: 5px;
+    position: relative;
+}
+.questions-menu .close,.questions-menu .open{
+    display: block;
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    /* border: 1px solid green; */
+
+}
+.questions-menu .open{
+    display: none;
+}
+
+.question-ans{
+    display: none;
+    background-color: grey;
+    height: 40px;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.underline{
+    height: 2px;
+    width: 30%;
+    background-color: brown;
+    margin-bottom: 10px;
+}
+.photo{
+    width: 30%;
+    height: 40px;
+    
+}
+.main-menu{
+    padding: 30px;
+    height: 600px;
+    width: 100%;
+}
+.section-center{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 20px;
+}
+.menu-item{
+    /* height: 400px;
+    width: 30%;*/
+    padding: 30px;
+    border: 2px solid black; 
+}
+
+.filterbtns{
+    padding: 10px 20px;
+}
+.filter-buttons{
+    height: 50px;
+    margin: 5px;
+}

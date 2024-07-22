@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-image: url(Images/img1.jpg);
+}
+#container{
+    display: none;
+    /* background-color: blue; */
+    height: 400px;
+    width: 30%;
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 0 0 100px;
+    backdrop-filter: blur(20px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation-name: animatedmodel;
+    animation-duration: .4s;
+}
+.main-heading{
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
+    text-align: center;
+}
+.main-content{
+    padding: 20px;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+}
+.input-box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    border-bottom: 2px solid black;
+}
+.input-box label{
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.input-box input{
+    
+    height: 100%;
+    width: 100%;
+    background: transparent; 
+    border: none;
+    outline: none;
+    line-height:10px;
+    font-size: 1em;
+    font-weight: 600;
+}
+.remeber-forget{
+    font-weight: 500;
+    font-size: 1em;
+    margin: -15px 0 15px;
+    /* display: block;
+    justify-content: space-between; */
+    margin-top: 10px;
+    text-decoration: none;
+    
+}
+.remeber-forget a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    margin: 3   0px 0;
+}
+.remeber-forget a:hover{
+    text-decoration: underline;
+}
+.btn{
+    /* position: absolute;
+    top: 0;
+    right: 70%; */
+    font-size: 12px;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+.btn:hover,#btn1:hover{
+    background-color: black;
+    color: white;
+}
+/* #model{
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    height: 100px;
+    padding: 10px  20px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+#btn1{
+    position: absolute;
+    top: 0;
+    right: 70%;
+    font-size: 12px;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+#close-btn{
+    font-size: 3rem;
+    cursor: pointer;
+}
